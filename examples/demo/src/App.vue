@@ -4,11 +4,10 @@
     :class="{ 'has-mouse': hasMouse }"
     @touchstart="hasMouse = false"
   >
-    <Ribbon />
     <Flipbook
       class="flipbook"
       :pages="pages"
-      :pagesHiRes="pagesHiRes"
+      :clickToZoom="false"
       :startPage="pageNum"
       v-slot="flipbook"
       ref="flipbook"
@@ -59,10 +58,9 @@ import RightIcon from 'vue-material-design-icons/ChevronRightCircle'
 import PlusIcon from 'vue-material-design-icons/PlusCircle'
 import MinusIcon from 'vue-material-design-icons/MinusCircle'
 import Flipbook from 'flipbook-vue'
-import Ribbon from './Ribbon'
 
 export default {
-  components: { Flipbook, LeftIcon, RightIcon, PlusIcon, MinusIcon, Ribbon },
+  components: { Flipbook, LeftIcon, RightIcon, PlusIcon, MinusIcon },
   data() {
     return {
       pages: [],
@@ -105,22 +103,14 @@ export default {
     setTimeout(() => {
       this.pages = [
         null,
-        'images/1.jpg',
-        'images/2.jpg',
-        'images/3.jpg',
-        'images/4.jpg',
-        'images/5.jpg',
-        'images/6.jpg',
+        'https://raw.githubusercontent.com/liujianchun/flipbook-vue2/master/examples/images/1.jpg',
+        'https://raw.githubusercontent.com/liujianchun/flipbook-vue2/master/examples/images/2.jpg',
+        'https://raw.githubusercontent.com/liujianchun/flipbook-vue2/master/examples/images/3.jpg',
+        'https://raw.githubusercontent.com/liujianchun/flipbook-vue2/master/examples/images/4.jpg',
+        'https://raw.githubusercontent.com/liujianchun/flipbook-vue2/master/examples/images/5.jpg',
+        'https://raw.githubusercontent.com/liujianchun/flipbook-vue2/master/examples/images/6.jpg',
       ]
-      this.pagesHiRes = [
-        null,
-        'images-large/1.jpg',
-        'images-large/2.jpg',
-        'images-large/3.jpg',
-        'images-large/4.jpg',
-        'images-large/5.jpg',
-        'images-large/6.jpg',
-      ]
+      this.pagesHiRes = []
     }, 1)
 
     window.addEventListener('hashchange', this.setPageFromHash)
