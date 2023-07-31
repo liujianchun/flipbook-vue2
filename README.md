@@ -1,9 +1,8 @@
-# flipbook-vue
+# flipbook-vue2
 
-[![npm version](https://badge.fury.io/js/flipbook-vue.svg)](https://badge.fury.io/js/flipbook-vue)
-![demo](https://github.com/ts1/flipbook-vue/workflows/demo/badge.svg)
+[forked from](https://github.com/ts1/flipbook-vue).
 
-`flipbook-vue` is a Vue component that displays images in 3D page flip effect.
+`flipbook-vue2` is a Vue component that displays images in 3D page flip effect. support vue version 2
 
 Demo page is [here](https://ts1.github.io/flipbook-vue/).
 
@@ -14,57 +13,24 @@ Install as a module:
 ```
 npm i -S flipbook-vue
 ```
-
-or
-
-```
-yarn add flipbook-vue
-```
-
-or
-
-```
-pnpm add flipbook-vue
-```
-
-Or include in html:
-
-```html
-<script src="https://unpkg.com/flipbook-vue"></script>
-```
-
-> **BREAKING CHANGE**: This form now provides Vue 3 version.
-> If you are using Vue 2.x, use `"https://unpkg.com/flipbook-vue/dist/vue2/flipbook.min.js"` (preferred) or `"https://unpkg.com/flipbook-vue@0"`.
-
 ## Usage
 
 ```html
 <template>
   <flipbook class="flipbook" :pages="['array', 'of', 'image', 'URLs']"></flipbook>
 </template>
-
+<script>
+import Flipbook from 'flipbook-vue'
+export default {
+    components: { Flipbook }
+}
+</script>
 <style>
 .flipbook {
   width: 90vw;
   height: 90vh;
 }
 </style>
-```
-
-If installed as a module, with Vue 3.x,
-
-```html
-<script>
-import Flipbook from 'flipbook-vue'
-export default {
-  components: { Flipbook }
-}
-</script>
-```
-
-To use with Vue 2.x,
-```js
-import Flipbook from 'flipbook-vue/vue2'
 ```
 
 ## Props

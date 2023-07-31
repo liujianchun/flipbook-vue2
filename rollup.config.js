@@ -2,7 +2,7 @@ import buble from '@rollup/plugin-buble'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import url from '@rollup/plugin-url'
-import vue from 'rollup-plugin-vue'
+// import vue from 'rollup-plugin-vue'
 import vue2 from 'rollup-plugin-vue2'
 import coffeescript from 'rollup-plugin-coffee-script'
 import { terser } from 'rollup-plugin-terser'
@@ -63,9 +63,9 @@ const browser = (vue, dist, minify) => ({
 })
 
 export default [
-  modules(vue, 'dist'),
-  browser(vue, 'dist', false),
-  browser(vue, 'dist', true),
+  // modules(vue, 'dist'),
+  // browser(vue, 'dist', false),
+  // browser(vue, 'dist', true),
   modules(vue2, 'dist/vue2'),
   browser(vue2, 'dist/vue2', false),
   browser(vue2, 'dist/vue2', true),
