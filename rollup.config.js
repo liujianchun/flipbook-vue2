@@ -66,7 +66,7 @@ export default [
   // modules(vue, 'dist'),
   // browser(vue, 'dist', false),
   // browser(vue, 'dist', true),
-  modules(vue2, 'dist/vue2'),
-  browser(vue2, 'dist/vue2', false),
-  browser(vue2, 'dist/vue2', true),
+  modules(vue2, 'dist'),
+  browser(vue2, 'dist', false),
+  browser(vue2, 'dist', true),
 ]

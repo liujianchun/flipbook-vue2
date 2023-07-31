@@ -1,5 +1,5 @@
 {
-  "name": "flipbook-vue",
+  "name": "flipbook-vue2",
   "version": "1.0.0",
   "license": "MIT",
   "description": "3D page flip effect for Vue.js; support Vue Version 2",
@@ -18,14 +18,14 @@
     "coffeescript",
     "coffeescript2"
   ],
-  "module": "dist/vue2/flipbook.mjs",
-  "main": "dist/vue2/flipbook.cjs.js",
-  "unpkg": "dist/vue2/flipbook.min.js",
+  "module": "dist/flipbook.mjs",
+  "main": "dist/flipbook.cjs.js",
+  "unpkg": "dist/flipbook.min.js",
   "exports": {
-    "./vue2": {
-      "import": "./dist/vue2/flipbook.mjs",
-      "require": "./dist/vue2/flipbook.cjs.js",
-      "browser": "./dist/vue2/flipbook.min.js"
+    ".": {
+      "import": "./dist/flipbook.mjs",
+      "require": "./dist/flipbook.cjs.js",
+      "browser": "./dist/flipbook.min.js"
     }
   },
   "scripts": {
@@ -36,7 +36,7 @@
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-url": "^7.0.0",
-    "@vue/compiler-sfc": "^3.2.37",
+    "vue": "2.6.10",
     "autoprefixer": "^10.4.8",
     "coffeescript": "^2.7.0",
     "postcss": "^8.4.16",
@@ -46,7 +46,7 @@
     "rollup-plugin-terser": "^7.0.0",
     "rollup-plugin-vue": "^6.0.0",
     "rollup-plugin-vue2": "npm:rollup-plugin-vue@^5.0.0",
-    "vue-template-compiler": "^2.7.14"
+    "vue-template-compiler": "2.6.10"
   },
   "peerDependencies": {
     "vue": ">=2.6.10"

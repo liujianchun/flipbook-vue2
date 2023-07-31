@@ -2,7 +2,7 @@
 
 [forked from](https://github.com/ts1/flipbook-vue).
 
-`flipbook-vue2` is a Vue component that displays images in 3D page flip effect. support vue version 2
+`flipbook-vue2` is a Vue component that displays images in 3D page flip effect. support only vue version 2
 
 Demo page is [here](https://ts1.github.io/flipbook-vue/).
 
@@ -11,7 +11,7 @@ Demo page is [here](https://ts1.github.io/flipbook-vue/).
 Install as a module:
 
 ```
-npm i -S flipbook-vue
+npm i flipbook-vue2
 ```
 ## Usage
 
