@@ -20,7 +20,7 @@ npm i flipbook-vue2
   <flipbook class="flipbook" :pages="['array', 'of', 'image', 'URLs']"></flipbook>
 </template>
 <script>
-import Flipbook from 'flipbook-vue'
+import Flipbook from 'flipbook-vue2'
 export default {
     components: { Flipbook }
 }
